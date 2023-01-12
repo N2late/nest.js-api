@@ -12,3 +12,5 @@ services:
       - nest-api-network
 networks:
   nest-api-network:
+# cli -> docker compose up dev-db -d
+# note: needs to have the docker desktop running.
