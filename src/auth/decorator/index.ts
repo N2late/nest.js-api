@@ -1,0 +1,1 @@
+export * from './get-user.decorator'; // barrel export pattern: A barrel is a way to roll up all of the exports of a module into a single barrel export file. This way, instead of importing from multiple files, you can import just from the barrel file.
