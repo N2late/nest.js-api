@@ -16,4 +16,13 @@ export class PrismaService extends PrismaClient {
       },
     });
   }
+
+  // tear down logic for the e2e tests (we could also simply setup the prima schema to delete on cascade)
+  // the $transaction method is a Prisma method that allows us to execute multiple queries in a single transaction by the order we pass them in
+  cleanDb() {
+    return this.$transaction([
+      this.bookmark.deleteMany(),
+      this.user.deleteMany(),
+    ]);
+  }
 }
